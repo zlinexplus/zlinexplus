@@ -6,6 +6,10 @@
 <title>ZLINEX PLUS s.r.o.</title>
 
 <style>
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -13,86 +17,128 @@ body {
     background: url('background.png') no-repeat center center fixed;
     background-size: cover;
     color: white;
-    text-align: center;
 }
 
+/* Tmavý overlay */
 .overlay {
     background: rgba(0, 0, 0, 0.80);
     min-height: 100vh;
-    padding-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Hlavní obsah */
+.content {
+    width: 100%;
+    max-width: 1100px;
 }
 
 h1 {
-    font-size: 44px;
-    font-weight: bold;
-    margin-bottom: 80px;
+    font-size: 3rem;
+    margin-bottom: 60px;
     text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
 }
 
 .company {
-    font-size: 38px;
+    font-size: 2.5rem;
     font-weight: bold;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
 }
 
 .address {
-    font-size: 30px;
-    margin: 6px 0;
+    font-size: 1.8rem;
+    margin: 5px 0;
     text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
 }
 
 .vat {
-    font-size: 30px;
-    margin: 25px 0 70px 0;
+    font-size: 1.8rem;
+    margin: 20px 0 50px 0;
     text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
 }
 
 .contact-section {
     display: flex;
     justify-content: center;
-    gap: 140px;
+    gap: 100px;
     flex-wrap: wrap;
-    margin-top: 40px;
 }
 
 .contact-box {
-    font-size: 26px;
+    font-size: 1.5rem;
+    margin-top: 20px;
     text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
 }
 
 .email {
     color: #FFD700;
     font-weight: bold;
-    margin-top: 12px;
-    font-size: 28px;
+    margin-top: 10px;
+    font-size: 1.7rem;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 768px) {
+
+    h1 {
+        font-size: 1.8rem;
+        margin-bottom: 40px;
+    }
+
+    .company {
+        font-size: 1.8rem;
+    }
+
+    .address,
+    .vat {
+        font-size: 1.2rem;
+    }
+
+    .contact-section {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .contact-box {
+        font-size: 1.1rem;
+    }
+
+    .email {
+        font-size: 1.2rem;
+    }
 }
 </style>
 </head>
 
 <body>
 <div class="overlay">
+    <div class="content">
 
-<h1>Stránky v rekonstrukci / WEBSITE UNDER CONSTRUCTION</h1>
+        <h1>Stránky v rekonstrukci / WEBSITE UNDER CONSTRUCTION</h1>
 
-<div class="company">ZLINEX PLUS s.r.o.</div>
-<div class="address">Kvítková 3642</div>
-<div class="address">760 01 Zlín</div>
-<div class="vat">CZ04375203</div>
+        <div class="company">ZLINEX PLUS s.r.o.</div>
+        <div class="address">Kvíková 3642</div>
+        <div class="address">CZ-760 01 Zlín</div>
+        <div class="vat">CZ04375203</div>
 
-<div class="contact-section">
-    <div class="contact-box">
-        Kontaktní e-mail / contact e-mail
-        <div class="email">INFO@ZLINEXPLUS.CZ</div>
+        <div class="contact-section">
+            <div class="contact-box">
+                Kontaktní e-mail / contact e-mail
+                <div class="email">INFO@ZLINEXPLUS.CZ</div>
+            </div>
+
+            <div class="contact-box">
+                Fakturační e-mail / INVOICE e-mail
+                <div class="email">INVOICE@ZLINEXPLUS.CZ</div>
+            </div>
+        </div>
+
     </div>
-
-    <div class="contact-box">
-        Fakturační e-mail / INVOICE e-mail
-        <div class="email">INVOICE@ZLINEXPLUS.CZ</div>
-    </div>
-</div>
-
 </div>
 </body>
 </html>
-
